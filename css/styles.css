@@ -31,7 +31,7 @@
 body {
   background-color: var(--surface-bg);
   color: var(--text-dark);
-  padding-bottom: 90px;
+  padding-bottom: 120px;
   min-height: 100vh;
 }
 
@@ -165,7 +165,7 @@ body {
   line-height: 1.45;
 }
 
-/* Section Titles & Cards */
+/* Quick Action Cards */
 .section-title {
   font-size: 1.05rem;
   font-weight: 700;
@@ -256,7 +256,7 @@ body {
   gap: 4px;
 }
 
-/* External Link Card Helper */
+/* External Link Card Utilities */
 .text-decoration-none {
   text-decoration: none;
   color: inherit;
@@ -273,13 +273,20 @@ body {
   background: #ffffff;
   border: 1px solid rgba(197, 155, 39, 0.35);
   box-shadow: 0 4px 12px rgba(11, 22, 34, 0.05);
+  margin-top: 18px;
+  margin-bottom: 24px;
+  padding: 10px;
+  text-align: center;
+  overflow: hidden;
 }
 
 .mrp-banner-img {
   width: 100%;
+  max-width: 100%;
   height: auto;
   border-radius: 8px;
   display: block;
+  margin: 0 auto;
 }
 
 /* Vault List & Downloads */
@@ -425,31 +432,6 @@ body {
   outline: none;
   border-color: var(--gold);
   box-shadow: 0 0 0 3px var(--gold-glow);
-}
-
-/* Calculator Output */
-.calc-result-box {
-  background: var(--navy-dark);
-  color: #ffffff;
-  padding: 20px;
-  border-radius: var(--radius-md);
-  margin-top: 16px;
-  text-align: center;
-  border: 1px solid rgba(197, 155, 39, 0.4);
-}
-
-.calc-result-box h3 {
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--gold);
-  margin-bottom: 6px;
-}
-
-.calc-result-box .amount {
-  font-size: 1.9rem;
-  font-weight: 800;
-  color: #ffffff;
 }
 
 /* Bottom Glass Navigation */
