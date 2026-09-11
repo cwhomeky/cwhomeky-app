@@ -60,7 +60,7 @@
           </div>
         </div>
 
-        <!-- Military.com VA Loan Estimator Tile -->
+        <!-- VA Loan Estimator Tile -->
         <a href="https://www.military.com/money/va-loans/VA-Loan-Calculator" target="_blank" rel="noopener noreferrer" class="card action-tile text-decoration-none">
           <div class="tile-icon"><i class="fa-solid fa-calculator"></i></div>
           <div>
@@ -76,8 +76,8 @@
         <a href="https://cwhomeky.com/#contact" target="_blank" rel="noopener noreferrer" class="card action-tile text-decoration-none">
           <div class="tile-icon"><i class="fa-solid fa-calendar-check"></i></div>
           <div>
-            <h3>Book Showing</h3>
-            <p>Inquire directly with Patrick C. Washington.</p>
+            <h3>Inquire / Book Showing</h3>
+            <p>Connect directly with Patrick C. Washington.</p>
           </div>
           <div class="tile-arrow">
             <i class="fa-solid fa-arrow-up-right-from-square" style="color: var(--gold); font-size: 0.85rem;"></i>
@@ -85,9 +85,9 @@
         </a>
       </div>
 
-      <!-- MRP Official Badge & Trust Card -->
+      <!-- MRP Official Badge Card -->
       <div class="card mrp-credential-card" style="margin-top: 18px; padding: 12px; text-align: center; overflow: hidden;">
-        <img src="images/mrp-banner.jpg" alt="Need a REALTOR that understands military relocation? Work with an MRP Certified Specialist" class="mrp-banner-img">
+        <img src="images/mrp-banner.jpg" alt="Work with a Military Relocation Professional" class="mrp-banner-img" style="width: 100%; height: auto; display: block; border-radius: 8px;">
       </div>
 
     </section>
@@ -171,210 +171,6 @@
       <span>VA Calc</span>
     </a>
     <a href="https://cwhomeky.com/#contact" target="_blank" rel="noopener noreferrer" class="nav-item text-decoration-none">
-      <i class="fa-solid fa-envelope"></i>
-      <span>Inquire</span>
-    </a>
-  </nav>
-
-  <!-- Auth Modal -->
-  <div id="auth-modal" class="modal-overlay hidden">
-    <div class="modal-card">
-      <button class="modal-close" onclick="closeAuthModal()">&times;</button>
-      <h3 style="color:var(--navy-dark); font-size:1.25rem; font-weight:800; margin-bottom:6px;">Unlock Military Relocation Vault</h3>
-      <p style="color:var(--text-muted); font-size:0.88rem; line-height:1.4;">Sign in to access all downloadable relocation checklists and property search tools.</p>
-      
-      <button id="google-auth-btn" class="btn btn-block" style="background:#ffffff; color:#374151; border:1px solid #cbd5e1; margin:16px 0 12px; box-shadow:0 1px 3px rgba(0,0,0,0.08);">
-        <i class="fa-brands fa-google" style="color:#ea4335;"></i> Continue with Google
-      </button>
-
-      <div style="text-align:center; margin:12px 0; color:#94a3b8; font-size:0.8rem; font-weight:600;">— OR USE EMAIL —</div>
-
-      <form id="auth-form">
-        <div class="form-group">
-          <label>Full Name</label>
-          <input type="text" id="auth-name" required placeholder="John Doe">
-        </div>
-        <div class="form-group">
-          <label>Email Address</label>
-          <input type="email" id="auth-email" required placeholder="name@email.com">
-        </div>
-        <div class="form-group">
-          <label>Password</labelHere is the complete `index.html` connecting your direct showing booking and inquiry link to `cwhomeky.com`:
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>CW Home KY | Military Relocation & Property Hub</title>
-  <meta name="description" content="Hardin County Property Search & Military Relocation Resources by Patrick Washington | Pennington Properties.">
-  <meta name="theme-color" content="#0b1622">
-  
-  <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css)">
-</head>
-<body>
-
-  <!-- Top Executive Navigation -->
-  <header class="app-header">
-    <div class="brand-wrapper">
-      <i class="fa-solid fa-house-chimney brand-logo-icon"></i>
-      <div class="brand-text">
-        <h1>CW Home KY</h1>
-        <small>Military Relocation Hub</small>
-      </div>
-    </div>
-    <div id="user-status" class="user-badge">
-      <button id="auth-btn" class="btn-sm btn-outline">Sign In</button>
-    </div>
-  </header>
-
-  <main class="app-container">
-
-    <!-- Screen 1: Dashboard -->
-    <section id="view-home" class="view active">
-      <div class="hero-card">
-        <div class="hero-tag"><i class="fa-solid fa-shield-halved"></i> MRP Certified Specialist</div>
-        <h2>Welcome to Your Central KY PCS Command Center</h2>
-        <p>Direct MLS inventory search, VA financing tools, and comprehensive relocation playbooks for Fort Knox and surrounding communities.</p>
-      </div>
-
-      <div class="section-title">
-        <span>Quick Access</span>
-        <small style="color:var(--text-muted); font-size:0.75rem;">Pennington Properties</small>
-      </div>
-
-      <div class="actions-grid">
-        <div class="card action-tile" onclick="navigateTo('view-search')">
-          <div class="tile-icon"><i class="fa-solid fa-magnifying-glass-location"></i></div>
-          <div>
-            <h3>Search Homes</h3>
-            <p>Active MLS inventory across Elizabethtown, Radcliff & beyond.</p>
-          </div>
-        </div>
-
-        <div class="card action-tile gold-tile" onclick="navigateTo('view-vault')">
-          <div class="lock-pill"><i class="fa-solid fa-lock"></i> Free Pass</div>
-          <div class="tile-icon"><i class="fa-solid fa-file-shield"></i></div>
-          <div>
-            <h3>MRP Vault</h3>
-            <p>90-Day PCS checklists, BAH rates, and moving guides.</p>
-          </div>
-        </div>
-
-        <!-- VA Loan Estimator Tile -->
-        <a href="[https://www.military.com/money/va-loans/VA-Loan-Calculator](https://www.military.com/money/va-loans/VA-Loan-Calculator)" target="_blank" rel="noopener noreferrer" class="card action-tile text-decoration-none">
-          <div class="tile-icon"><i class="fa-solid fa-calculator"></i></div>
-          <div>
-            <h3>VA Loan Estimator</h3>
-            <p>Official Military.com payment & rate calculator.</p>
-          </div>
-          <div class="tile-arrow">
-            <i class="fa-solid fa-arrow-up-right-from-square" style="color: var(--gold); font-size: 0.85rem;"></i>
-          </div>
-        </a>
-
-        <!-- Inquire / Book Showing Direct Link to cwhomeky.com -->
-        <a href="[https://cwhomeky.com/#contact](https://cwhomeky.com/#contact)" target="_blank" rel="noopener noreferrer" class="card action-tile text-decoration-none">
-          <div class="tile-icon"><i class="fa-solid fa-calendar-check"></i></div>
-          <div>
-            <h3>Inquire / Book Showing</h3>
-            <p>Connect directly with Patrick C. Washington.</p>
-          </div>
-          <div class="tile-arrow">
-            <i class="fa-solid fa-arrow-up-right-from-square" style="color: var(--gold); font-size: 0.85rem;"></i>
-          </div>
-        </a>
-      </div>
-
-      <!-- MRP Official Badge Card -->
-      <div class="card mrp-credential-card" style="margin-top: 18px; padding: 12px; text-align: center; overflow: hidden;">
-        <img src="images/mrp-banner.jpg" alt="Work with a Military Relocation Professional" class="mrp-banner-img" style="width: 100%; height: auto; display: block; border-radius: 8px;">
-      </div>
-
-    </section>
-
-    <!-- Screen 2: Property Search (Paragon MLS Integration) -->
-    <section id="view-search" class="view">
-      <div class="section-title">
-        <span>Active Kentucky MLS Search</span>
-      </div>
-      <div class="mls-container">
-        <div class="mls-banner">
-          <div>
-            <h4 style="color:var(--navy-dark); font-weight:700;">Live Paragon MLS Feed</h4>
-            <p style="font-size:0.85rem; color:var(--text-muted);">Browse current inventory updated continuously.</p>
-          </div>
-          <a href="[https://zsvc.paragon.ice.com/s/goto/ZxKmW-mMMEY](https://zsvc.paragon.ice.com/s/goto/ZxKmW-mMMEY)" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-sm">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Full MLS
-          </a>
-        </div>
-        <p style="font-size:0.9rem; color:var(--text-muted); line-height:1.5;">
-          Search active listings throughout Hardin, Meade, Nelson, and Jefferson Counties directly from the MLS database.
-        </p>
-        <a href="[https://zsvc.paragon.ice.com/s/goto/ZxKmW-mMMEY](https://zsvc.paragon.ice.com/s/goto/ZxKmW-mMMEY)" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block">
-          <i class="fa-solid fa-magnifying-glass"></i> Launch Property Search Portal
-        </a>
-      </div>
-    </section>
-
-    <!-- Screen 3: MRP Relocation Vault -->
-    <section id="view-vault" class="view">
-      <div class="section-title">
-        <span>Downloadable Relocation Guides</span>
-      </div>
-      <div class="vault-list">
-        <div class="card vault-item">
-          <div class="vault-header">
-            <i class="fa-solid fa-file-pdf vault-icon"></i>
-            <div class="vault-info">
-              <h4>Inbound PCS 90-Day Master Checklist</h4>
-              <p>Step-by-step housing timeline, utility hookups, and Hardin County school contacts.</p>
-            </div>
-          </div>
-          <button class="btn btn-gold download-btn" data-doc="pcs-checklist">
-            <i class="fa-solid fa-download"></i> Download PDF
-          </button>
-        </div>
-
-        <div class="card vault-item">
-          <div class="vault-header">
-            <i class="fa-solid fa-file-pdf vault-icon"></i>
-            <div class="vault-info">
-              <h4>VA Home Loan & COE Playbook</h4>
-              <p>Zero down payment facts, local appraisal insights, and funding fee exemptions.</p>
-            </div>
-          </div>
-          <button class="btn btn-gold download-btn" data-doc="va-playbook">
-            <i class="fa-solid fa-download"></i> Download PDF
-          </button>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Bottom Mobile Navigation Bar -->
-  <nav class="bottom-nav">
-    <button class="nav-item active" onclick="navigateTo('view-home')">
-      <i class="fa-solid fa-house"></i>
-      <span>Home</span>
-    </button>
-    <button class="nav-item" onclick="navigateTo('view-search')">
-      <i class="fa-solid fa-magnifying-glass"></i>
-      <span>Search</span>
-    </button>
-    <button class="nav-item" onclick="navigateTo('view-vault')">
-      <i class="fa-solid fa-shield-halved"></i>
-      <span>MRP Vault</span>
-    </button>
-    <a href="[https://www.military.com/money/va-loans/VA-Loan-Calculator](https://www.military.com/money/va-loans/VA-Loan-Calculator)" target="_blank" rel="noopener noreferrer" class="nav-item text-decoration-none">
-      <i class="fa-solid fa-calculator"></i>
-      <span>VA Calc</span>
-    </a>
-    <a href="[https://cwhomeky.com/#contact](https://cwhomeky.com/#contact)" target="_blank" rel="noopener noreferrer" class="nav-item text-decoration-none">
       <i class="fa-solid fa-envelope"></i>
       <span>Inquire</span>
     </a>
