@@ -60,13 +60,17 @@
           </div>
         </div>
 
-        <div class="card action-tile" onclick="navigateTo('view-calculator')">
+        <!-- VA Loan Quote Link Tile -->
+        <a href="https://cwhomeky.com/va-loan-quote" target="_blank" rel="noopener noreferrer" class="card action-tile text-decoration-none">
           <div class="tile-icon"><i class="fa-solid fa-calculator"></i></div>
           <div>
             <h3>VA Loan Estimator</h3>
-            <p>$0 down payment and monthly PITI calculator.</p>
+            <p>Get a quote & estimated rate breakdown.</p>
           </div>
-        </div>
+          <div class="tile-arrow">
+            <i class="fa-solid fa-arrow-up-right-from-square" style="color: var(--gold); font-size: 0.85rem;"></i>
+          </div>
+        </a>
 
         <div class="card action-tile" onclick="navigateTo('view-contact')">
           <div class="tile-icon"><i class="fa-solid fa-calendar-check"></i></div>
@@ -89,14 +93,14 @@
             <h4 style="color:var(--navy-dark); font-weight:700;">Live Paragon MLS Feed</h4>
             <p style="font-size:0.85rem; color:var(--text-muted);">Browse current inventory updated continuously.</p>
           </div>
-          <a href="https://zsvc.paragon.ice.com/s/goto/ZxKmW-mMMEY" target="_blank" class="btn btn-gold btn-sm">
+          <a href="https://zsvc.paragon.ice.com/s/goto/ZxKmW-mMMEY" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-sm">
             <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Full MLS
           </a>
         </div>
         <p style="font-size:0.9rem; color:var(--text-muted); line-height:1.5;">
           Search active listings throughout Hardin, Meade, Nelson, and Jefferson Counties directly from the MLS database.
         </p>
-        <a href="https://zsvc.paragon.ice.com/s/goto/ZxKmW-mMMEY" target="_blank" class="btn btn-primary btn-block">
+        <a href="https://zsvc.paragon.ice.com/s/goto/ZxKmW-mMMEY" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block">
           <i class="fa-solid fa-magnifying-glass"></i> Launch Property Search Portal
         </a>
       </div>
@@ -136,40 +140,7 @@
       </div>
     </section>
 
-    <!-- Screen 4: VA Loan Calculator -->
-    <section id="view-calculator" class="view">
-      <div class="section-title">
-        <span>VA Home Loan Payment Estimator</span>
-      </div>
-      <div class="card">
-        <div class="form-group">
-          <label for="calc-price">Purchase Price ($)</label>
-          <input type="number" id="calc-price" value="285000" step="5000">
-        </div>
-        <div class="form-group">
-          <label for="calc-rate">Interest Rate (%)</label>
-          <input type="number" id="calc-rate" value="6.25" step="0.125">
-        </div>
-        <div class="form-group">
-          <label for="calc-term">Loan Term</label>
-          <select id="calc-term">
-            <option value="30" selected>30 Years Fixed (Standard)</option>
-            <option value="15">15 Years Fixed</option>
-          </select>
-        </div>
-        <button id="calculate-btn" class="btn btn-primary btn-block">
-          <i class="fa-solid fa-calculator"></i> Calculate Monthly PITI
-        </button>
-
-        <div class="calc-result-box">
-          <h3>Estimated Total Monthly Payment</h3>
-          <div class="amount" id="res-total">$2,084.15/mo</div>
-          <small style="color:#94a3b8; display:block; margin-top:6px;">Includes estimated Hardin Co. taxes (~1%) & homeowners insurance (~0.5%) with $0 down.</small>
-        </div>
-      </div>
-    </section>
-
-    <!-- Screen 5: Contact & Showing Request -->
+    <!-- Screen 4: Contact & Showing Request -->
     <section id="view-contact" class="view">
       <div class="section-title">
         <span>Schedule Showing / Relocation Consult</span>
@@ -215,10 +186,10 @@
       <i class="fa-solid fa-shield-halved"></i>
       <span>MRP Vault</span>
     </button>
-    <button class="nav-item" onclick="navigateTo('view-calculator')">
+    <a href="https://cwhomeky.com/va-loan-quote" target="_blank" rel="noopener noreferrer" class="nav-item text-decoration-none">
       <i class="fa-solid fa-calculator"></i>
-      <span>Calc</span>
-    </button>
+      <span>VA Quote</span>
+    </a>
     <button class="nav-item" onclick="navigateTo('view-contact')">
       <i class="fa-solid fa-envelope"></i>
       <span>Contact</span>
