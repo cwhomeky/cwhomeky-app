@@ -15,9 +15,9 @@
   --radius-sm: 8px;
   --radius-md: 14px;
   --radius-lg: 20px;
-  --shadow-sm: 0 2px 4px rgba(0,0,0,0.04);
-  --shadow-md: 0 8px 20px rgba(11,22,34,0.08);
-  --shadow-lg: 0 12px 28px rgba(11,22,34,0.15);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 8px 20px rgba(11, 22, 34, 0.08);
+  --shadow-lg: 0 12px 28px rgba(11, 22, 34, 0.15);
 }
 
 * {
@@ -165,7 +165,7 @@ body {
   line-height: 1.45;
 }
 
-/* Quick Action Cards */
+/* Section Titles & Cards */
 .section-title {
   font-size: 1.05rem;
   font-weight: 700;
@@ -254,6 +254,32 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 4px;
+}
+
+/* External Link Card Helper */
+.text-decoration-none {
+  text-decoration: none;
+  color: inherit;
+}
+
+.action-tile .tile-arrow {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+/* MRP Trust Badge Container */
+.mrp-credential-card {
+  background: #ffffff;
+  border: 1px solid rgba(197, 155, 39, 0.35);
+  box-shadow: 0 4px 12px rgba(11, 22, 34, 0.05);
+}
+
+.mrp-banner-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
 }
 
 /* Vault List & Downloads */
@@ -355,7 +381,7 @@ body {
 
 .btn-outline {
   background: transparent;
-  border: 1px solid rgba(255,255,255,0.4);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   color: #ffffff;
 }
 
@@ -426,7 +452,7 @@ body {
   color: #ffffff;
 }
 
-/* Bottom Glass Nav */
+/* Bottom Glass Navigation */
 .bottom-nav {
   position: fixed;
   bottom: 0;
