@@ -1,0 +1,3 @@
+pip install git-filter-repo
+git filter-repo --replace-text <(echo 'AIzaSyAWhIIl_g6rW2TIU1rGIElPg1BIU1eH3-0==')
+git push --force
