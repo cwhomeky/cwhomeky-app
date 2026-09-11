@@ -1,1 +1,18 @@
-
+{
+  "name": "Kentucky Military Relocation & Property Hub",
+  "short_name": "CW Home KY",
+  "description": "PCS resources, Kentucky property search, and military relocation guides.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#1e3a8a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/mrp-banner.jpg",
+      "sizes": "192x192 512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}
