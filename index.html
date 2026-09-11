@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>CW Home KY | Military Relocation & Property Hub</title>
+  <meta name="description" content="Kentucky Property Search & Military Relocation Resources for Service Members and Families.">
+  <meta name="theme-color" content="#1a2e40">
+  
+  <!-- App Icons & Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- FontAwesome for UI Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="app-header">
+    <div class="brand">
+      <i class="fa-solid fa-house-flag"></i>
+      <span>CW Home KY <small>Relocation Hub</small></span>
+    </div>
+    <div id="user-status" class="user-badge">
+      <button id="auth-btn" class="btn-sm btn-outline">Sign In</button>
+    </div>
+  </header>
+
+  <!-- Main Dynamic View Container -->
+  <main class="app-container">
+
+    <!-- Screen 1: Home / Dashboard -->
+    <section id="view-home" class="view active">
+      <div class="hero-banner">
+        <h2>Your Kentucky & PCS Command Center</h2>
+        <p>Search active listings, calculate VA payments, and download complete relocation kits.</p>
+      </div>
+
+      <div class="quick-actions-grid">
+        <div class="card action-card" onclick="navigateTo('view-search')">
+          <i class="fa-solid fa-magnifying-glass-location card-icon"></i>
+          <h3>Property Search</h3>
+          <p>Browse active listings across Hardin County & Central KY.</p>
+        </div>
+
+        <div class="card action-card gated-feature" onclick="navigateTo('view-vault')">
+          <div class="lock-badge"><i class="fa-solid fa-lock"></i> Member Hub</div>
+          <i class="fa-solid fa-file-shield card-icon"></i>
+          <h3>MRP & PCS Vault</h3>
+          <p>Free checklists, BAH guides, and relocation playbooks.</p>
+        </div>
+
+        <div class="card action-card" onclick="navigateTo('view-calculator')">
+          <i class="fa-solid fa-calculator card-icon"></i>
+          <h3>VA Loan Estimator</h3>
+          <p>Accurate $0 down PITI payment breakdown.</p>
+        </div>
+
+        <div class="card action-card" onclick="navigateTo('view-contact')">
+          <i class="fa-solid fa-calendar-check card-icon"></i>
+          <h3>Request Tour / Consult</h3>
+          <p>Connect directly for virtual or in-person showings.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen 2: Property Search -->
+    <section id="view-search" class="view">
+      <div class="section-header">
+        <h2>Kentucky Property Search</h2>
+        <p>Explore homes around Fort Knox, Elizabethtown, and surrounding areas.</p>
+      </div>
+      <div class="search-placeholder card">
+        <i class="fa-solid fa-map-location-dot placeholder-icon"></i>
+        <p>Live MLS search feed will load here.</p>
+      </div>
+    </section>
+
+    <!-- Screen 3: MRP & PCS Resource Vault -->
+    <section id="view-vault" class="view">
+      <div class="section-header">
+        <h2>MRP & PCS Relocation Toolkit</h2>
+        <p>Exclusive resources for inbound and outbound service members.</p>
+      </div>
+      <div class="resource-list">
+        <div class="resource-item card">
+          <div class="resource-info">
+            <i class="fa-solid fa-file-pdf pdf-icon"></i>
+            <div>
+              <h4>Inbound PCS 90-Day Master Checklist</h4>
+              <p>Timelines, housing office contacts, and school enrollment steps.</p>
+            </div>
+          </div>
+          <button class="btn btn-primary download-btn" data-doc="pcs-checklist"><i class="fa-solid fa-download"></i> Download</button>
+        </div>
+
+        <div class="resource-item card">
+          <div class="resource-info">
+            <i class="fa-solid fa-file-pdf pdf-icon"></i>
+            <div>
+              <h4>VA Loan Playbook & Certificate of Eligibility Guide</h4>
+              <p>Zero down strategies, appraisal realities, and fee exemptions.</p>
+            </div>
+          </div>
+          <button class="btn btn-primary download-btn" data-doc="va-playbook"><i class="fa-solid fa-download"></i> Download</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen 4: VA Loan Calculator -->
+    <section id="view-calculator" class="view">
+      <div class="section-header">
+        <h2>VA Loan & Payment Estimator</h2>
+        <p>Estimate monthly housing costs including Kentucky taxes and insurance.</p>
+      </div>
+      <div class="card calc-container">
+        <div class="form-group">
+          <label for="calc-price">Purchase Price ($)</label>
+          <input type="number" id="calc-price" value="275000" step="5000">
+        </div>
+        <div class="form-group">
+          <label for="calc-rate">Interest Rate (%)</label>
+          <input type="number" id="calc-rate" value="6.5" step="0.125">
+        </div>
+        <div class="form-group">
+          <label for="calc-term">Loan Term</label>
+          <select id="calc-term">
+            <option value="30" selected>30 Years Fixed</option>
+            <option value="15">15 Years Fixed</option>
+          </select>
+        </div>
+        <button id="calculate-btn" class="btn btn-primary btn-block">Calculate Payment</button>
+        
+        <div class="calc-results" id="calc-results">
+          <h3>Estimated Monthly PITI: <span id="res-total">$0.00</span></h3>
+          <p><small>*Includes estimated Hardin Co. property tax and standard homeowners insurance.</small></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen 5: Contact & Tour Request -->
+    <section id="view-contact" class="view">
+      <div class="section-header">
+        <h2>Connect with CW Home KY</h2>
+        <p>Have questions about a listing or your upcoming PCS move?</p>
+      </div>
+      <div class="card contact-form-card">
+        <form id="lead-contact-form">
+          <div class="form-group">
+            <label for="contact-name">Full Name</label>
+            <input type="text" id="contact-name" required placeholder="John Doe">
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Email Address</label>
+            <input type="email" id="contact-email" required placeholder="john@example.com">
+          </div>
+          <div class="form-group">
+            <label for="contact-msg">Message / Desired Showing Time</label>
+            <textarea id="contact-msg" rows="4" placeholder="I'm PCSing in June and would like info on homes near Fort Knox..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Send Request</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Bottom Mobile Navigation Bar -->
+  <nav class="bottom-nav">
+    <button class="nav-item active" onclick="navigateTo('view-home')">
+      <i class="fa-solid fa-house"></i>
+      <span>Home</span>
+    </button>
+    <button class="nav-item" onclick="navigateTo('view-search')">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <span>Search</span>
+    </button>
+    <button class="nav-item" onclick="navigateTo('view-vault')">
+      <i class="fa-solid fa-shield-halved"></i>
+      <span>MRP Vault</span>
+    </button>
+    <button class="nav-item" onclick="navigateTo('view-calculator')">
+      <i class="fa-solid fa-calculator"></i>
+      <span>Calc</span>
+    </button>
+    <button class="nav-item" onclick="navigateTo('view-contact')">
+      <i class="fa-solid fa-envelope"></i>
+      <span>Contact</span>
+    </button>
+  </nav>
+
+  <!-- Auth / Gating Modal Overlay -->
+  <div id="auth-modal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeAuthModal()">&times;</button>
+      <h3>Unlock Military Relocation Vault</h3>
+      <p>Register once to access all downloadable relocation checklists and saved search tools.</p>
+      <form id="auth-form">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" id="auth-name" required placeholder="Your Name">
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" id="auth-email" required placeholder="name@email.com">
+        </div>
+        <div class="form-group">
+          <label>Military Status / PCS Timeline</label>
+          <input type="text" id="auth-timeline" placeholder="e.g. Active Duty - Arriving Summer 2026">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Access Free Guides</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
